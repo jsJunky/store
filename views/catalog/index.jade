@@ -1,0 +1,23 @@
+//Allow selection between list or grid format.
+div.well.well-sm
+  strong {{category.title}}
+  div.btn-group
+    a#list.btn.btn-default.btn-sm(href="#")
+      span.glyphicon.glyphicon-th-list
+      | List
+    a#grid.btn.btn-default.btn-sm(href="#")
+      span.glyphicon.glyphicon-th
+      | Grid
+//The item collection view. Could separate out the controls if that grows.
+div#products.row.list-group
+  div.item.col-xs-4.col-lg-4(ng-repeat="item in items")
+    div.thumbnail
+      img.group.list-group-image(src={{ item.imagethumb}}, alt="Need to put this in the model later.")
+      div.caption
+        h4.group.inner.list-group-item-heading {{ item.name }}
+        p.group.inner.list-group-item-text {{ item.description | limitTo : descriptionLimit }}
+        div.row
+          div.col-xs-12.col-md-6
+            p.lead {{ item.price }}
+          div.col-xs-12.col-md-6
+            a.btn.btn-success(ng-click="addToCart(item.id)")

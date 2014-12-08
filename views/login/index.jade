@@ -1,0 +1,38 @@
+
+#container.container
+  #alerts.row
+  #login-container.row.well.center
+    form#login-form.col-lg-5
+      legend Login
+      .form-group
+        label Username
+        input.form-control(type="text", id="loginName", placeholder="Username", required)
+      .form-group
+        label Password
+        input.form-control(type="password", id="loginPassword", placeholder="Password", required)
+      button#loginButton.btn.btn-primary.btn-block(type="submit") Login
+    .col-lg-1
+      h4.vertical-center OR
+    form#signup-form.col-lg-6
+      legend Signup
+      .row
+        .col-lg-6.form-group
+          label First Name
+          input#signupFirstName.form-control(type="text", value="", placeholder="First Name", required)
+        .col-lg-6.form-group
+          label Last Name
+          input#signupLastName.form-control(type="text", value="", placeholder="Last Name", required)
+        .form-group
+          label Username
+          input.form-control(type="text", id="signupUsername", placeholder="Username", required)
+        .form-group
+          label Email
+          input.form-control(type="email", id="signupEmail", placeholder="Email", required)
+        .row
+          .col-lg-6.form-group
+            label Password
+            input.form-control(type="password", id="signupPassword", placeholder="Password", required)
+          .col-lg-6.form-group
+            label Confirm Password
+            input.form-control(type="password", id="signupConfirmPassword", placeholder="Confirm Password", required)
+      button#signupButton.btn.btn-primary.btn-block(type="submit")  Signup
