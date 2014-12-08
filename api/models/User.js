@@ -85,7 +85,8 @@ module.exports = {
     },
 
 
-    // Lifecycle Callbacks
+    // Hash the users password before we either create or update a user's password.
+    // For more information see https://github.com/shaneGirish/bcrypt-nodejs
     beforeCreate: function(values, next) {
         bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
             if (err) return next(err);
