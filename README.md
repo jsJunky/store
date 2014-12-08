@@ -8,10 +8,10 @@ General Architecture
 
 The plan here will be to generate the angularjs partials server side to allow for separate admin, group, or user views later down the line. This is handled in config/routes.js
 
-'''JSON
+```JSON
 'get /partials/:folder/:file' : 'main.partial',
 '/*' : 'main.index'
-'''
+```
 
 While every missed route gets passed back to MainController's index action, sailsjs will still serve static js/css files through its assets folder. We will place our store-angular app here which points the templateUrl's back to the correct partial.
 
